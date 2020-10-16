@@ -1,1 +1,1 @@
-# Hadoop_MapReduce_Algorithms
+# Hadoop MapReduce Algorithms
