@@ -4,4 +4,13 @@
 MutualFriendsList/src/driver/*
 MutualFriendsList/src/mapper/*
 MutualFriendsList/src/reducer/*
+
+AverageOfFriendsAge/src/reducer/*
+AverageOfFriendsAge/src/reducer/*
+AverageOfFriendsAge/src/reducer/*
+
+
+SortingFriendsByAge/src/driver/*
+SortingFriendsByAge/src/mapper/*
+SortingFriendsByAge/src/reducer/*
 /.metadata/
