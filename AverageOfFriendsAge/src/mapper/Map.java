@@ -158,8 +158,8 @@ public class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
 			friends_age.set(friend_age);
 			
 			// Userid and name followed by ALL OF THEIR FRIENDS AGE
-			// "0,Evangeline"	24
-			// "0,Evangeline"	47 
+			// "0,Evangeline"	47
+			// "0,Evangeline"	70 
 			// and so on
 			 context.write(userid_and_name, friends_age); 
 		}
