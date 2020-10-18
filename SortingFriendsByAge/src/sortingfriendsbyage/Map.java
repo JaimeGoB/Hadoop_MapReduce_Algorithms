@@ -117,7 +117,7 @@ public class Map extends Mapper<LongWritable, Text, UserFriendAgePair, Text>{
 	/*
 	 * The output of mapper will be:
 	 * 
-	 * KEY(object)		  		VALUE(int)
+	 * KEY-object  		  		VALUE-Text
 	 * 
 	 * UserFriendAgePair		friends_age
 	 *  0, 24					"Robert,24"
@@ -162,8 +162,8 @@ public class Map extends Mapper<LongWritable, Text, UserFriendAgePair, Text>{
 			friends_first_name_And_age.set(friend_name + " \t"+ friend_age);
 
 			
-			// UserFriendAgePair Followed by the friends age
-			// * reducerKey					val
+			// UserFriendAgePair object followed by the friends age
+			// * userId_with_Friends...		val
 			// * IntWritables (both)		Text
 			// *   0 , 24				"Robert 24"
 			// *   0 , 47				"Kathryn 47"

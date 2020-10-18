@@ -32,19 +32,16 @@ public class SortingFriendsByAge {
 		
 		//Setting up map class name
 		job.setMapperClass(Map.class);
-        job.setMapOutputKeyClass(Text.class);
-        //job.setMapOutputKeyClass(Text.class);
-		job.setMapOutputValueClass(IntWritable.class);
+		//setting up key values for reducer input
+        job.setMapOutputKeyClass(UserFriendAgePair.class);
+		job.setMapOutputValueClass(Text.class);
+		
 		
 		// Partitioning/Sorting/Grouping configuration
 		job.setPartitionerClass(UserFriendAgePartitioner.class);
 		job.setGroupingComparatorClass(NaturalKeyComparator.class);
 		job.setSortComparatorClass(FullKeyComparator.class);
 
-		//setting up key values for reducer output
-        job.setMapOutputKeyClass(UserFriendAgePair.class);
-        //job.setMapOutputKeyClass(Text.class);
-		job.setMapOutputValueClass(Text.class);
 
 		//Setting up reduce class name
 		job.setReducerClass(Reduce.class);

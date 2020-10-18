@@ -11,6 +11,11 @@ public class FullKeyComparator extends WritableComparator{
     }
 
     //Overriding compare method
+    /*
+     * This class is in charge of sorting by the full key:
+     * The has userId and friends_age both IntWritable,
+     * I will sort based on both.
+     * */
     public int compare(WritableComparable obj1, WritableComparable obj2) {
     	
 		UserFriendAgePair k1 = (UserFriendAgePair)obj1;

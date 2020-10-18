@@ -11,6 +11,12 @@ public class NaturalKeyComparator extends WritableComparator{
     }
 
     //Overriding compare method
+    /*
+     * We will use this to group by the same natural key,
+     * in our case the natural key is user.
+     * Thus we want to group all objects with the same userID
+     * (Note this is userId of person NOT OF FRIENDS)
+     * */
     public int compare(WritableComparable a, WritableComparable b) {
     	
     	

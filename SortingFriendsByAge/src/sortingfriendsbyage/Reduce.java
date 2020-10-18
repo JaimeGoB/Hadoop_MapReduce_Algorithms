@@ -18,7 +18,7 @@ public class Reduce extends Reducer<UserFriendAgePair, Text, Text,Text>{
         	
     		//Adding comma to seperat different friends
             sorted_friend_and_age_list.append(friend_name_age);
-            sorted_friend_and_age_list.append(",");
+            sorted_friend_and_age_list.append(", ");
             
 
         }
