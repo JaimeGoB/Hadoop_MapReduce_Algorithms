@@ -1,5 +1,54 @@
 # Homework 2 - Hadoop MapReduc Algorithms
 
+# Section 0 - How to run the programs:
+
+## Problem 1 - Finding Mutual Friends Between Two Users
+In order to run first project:
+
+MutualFriendsList
+
+It is indispensible to locate the path of the jar file. Once the jar path is ready. Run the following command followed by arguments:
+
+hadoop jar 'HDFS LOCATION'/soc-LiveJournal1Adj.txt 'HDFS LOCATION FOR OUTPUT'
+
+EX:
+
+hadoop jar /user/jaime/input/soc-LiveJournal1Adj.txt /user/jaime/out/MutualFriendList/
+
+
+## Problem 3 - Finding the Average Age for a Users Friends
+
+In order to run second project:
+
+AverageOfFriendsList
+
+It is indispensible to locate the path of the jar file. Once the jar path is ready. Run the following command followed by arguments:
+
+hadoop jar 'HDFS LOCATION'/soc-LiveJournal1Adj.txt 'HDFS LOCATION'/userdata.txt 'HDFS LOCATION FOR OUTPUT'
+
+EX:
+
+hadoop jar SortingFriendsByAge.jar /user/jaime/input/HW2/users/userdata.txt /user/jaime/input/HW2/friends/soc-LiveJournal1Adj.txt /user/jaime/out/AverageOfFriendsList/
+
+
+
+## Problem 4 - Sorting Friends List by Age
+
+
+In order to run second project:
+
+SortingFriendByAge
+
+It is indispensible to locate the path of the jar file. Once the jar path is ready. Run the following command followed by arguments:
+
+hadoop jar 'HDFS LOCATION'/soc-LiveJournal1Adj.txt 'HDFS LOCATION'/userdata.txt 'HDFS LOCATION FOR OUTPUT'
+
+EX:
+
+hadoop jar SortingFriendsByAge.jar /user/jaime/input/HW2/users/userdata.txt /user/jaime/input/HW2/friends/soc-LiveJournal1Adj.txt /user/jaime/out/SortingFriendsByAge/
+
+
+# Section 1 - Solutions Description
 **Given two input files:**
 
 ### 1) userdata.txt
