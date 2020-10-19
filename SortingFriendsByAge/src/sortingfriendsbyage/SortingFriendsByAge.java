@@ -46,7 +46,7 @@ public class SortingFriendsByAge {
 		//Setting up reduce class name
 		job.setReducerClass(Reduce.class);
 		//setting up key values for reducer output
-		job.setOutputKeyClass(Text.class);
+		job.setOutputKeyClass(IntWritable.class);
 		job.setOutputValueClass(Text.class);
 		
 		//HDFS file input path

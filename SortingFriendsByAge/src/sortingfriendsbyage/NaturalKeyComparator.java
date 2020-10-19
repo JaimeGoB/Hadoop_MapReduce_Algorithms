@@ -23,6 +23,6 @@ public class NaturalKeyComparator extends WritableComparator{
 		UserFriendAgePair k1 = (UserFriendAgePair)a;
 		UserFriendAgePair k2 = (UserFriendAgePair)b;
 
-		return k1.userId.compareTo(k2.userId);
+		return Integer.compare(k1.userId, k2.userId);
     }
 }

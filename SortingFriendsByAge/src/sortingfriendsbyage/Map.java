@@ -20,8 +20,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 public class Map extends Mapper<LongWritable, Text, UserFriendAgePair, Text>{
    
 	//Key- UserId and Friends Age object with IntWritables
-	IntWritable userId = new IntWritable();
-	IntWritable friends_age = new IntWritable();
+	int userId;
+	int friends_age;
 	
 	//Value for object - containing first name and age of friend
 	Text friends_first_name_And_age = new Text();
@@ -138,7 +138,7 @@ public class Map extends Mapper<LongWritable, Text, UserFriendAgePair, Text>{
 		//[ 1 | 2 | 3 | 4 |....]
 		String[] friends_array = lineInFile[1].split(",");
 		String userid = lineInFile[0];
-		userId.set(Integer.parseInt(userid));
+		userId = Integer.parseInt(userid);
 
 		//Iterate through friends of user id to get the ages of all friends
 		for (String friend : friends_array) {
@@ -150,11 +150,13 @@ public class Map extends Mapper<LongWritable, Text, UserFriendAgePair, Text>{
 			//Getting the friends age. In this case getting age of user 1 not user 0.
 			// friend_age = 24
 			int friend_age = Integer.parseInt(friend_age_and_name[0]);
+			//Use to store friends age as int in Pair Object
+			friends_age = friend_age;
+			
 			//Getting friends first name
 			// friend_name = Robert
 			String friend_name = friend_age_and_name[1];
-			//Use to store friends age as IntWritable in Pair Object
-			friends_age.set(friend_age);
+
 			
 			//Setting up key
 			UserFriendAgePair userId_with_FriendsAge_Key = new UserFriendAgePair(userId, friends_age);
@@ -164,7 +166,7 @@ public class Map extends Mapper<LongWritable, Text, UserFriendAgePair, Text>{
 			
 			// UserFriendAgePair object followed by the friends age
 			// * userId_with_Friends...		val
-			// * IntWritables (both)		Text
+			// * Ints(both)					Text
 			// *   0 , 24				"Robert 24"
 			// *   0 , 47				"Kathryn 47"
 			// ............

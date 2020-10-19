@@ -21,10 +21,10 @@ public class FullKeyComparator extends WritableComparator{
 		UserFriendAgePair k1 = (UserFriendAgePair)obj1;
 		UserFriendAgePair k2 = (UserFriendAgePair)obj2;
 
-		int result = k1.userId.compareTo(k2.userId);
+		int result = Integer.compare(k1.userId, k2.userId);
 		
 		if (result == 0) 
-			return k1.friends_age.compareTo(k2.friends_age);
+			return Integer.compare(k1.friends_age, k2.friends_age);
 		else 
 			return result;
     }
