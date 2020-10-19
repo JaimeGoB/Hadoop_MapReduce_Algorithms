@@ -1,8 +1,8 @@
 # Homework 2 - Hadoop MapReduc Algorithms
 
-#### Given two input files:
+**Given two input files:**
 
-- ** 1) userdata.txt **
+### 1) userdata.txt
 
 This file contains relevant information for a given user. 
 The file contains userId, name, address and date of birth.
@@ -29,7 +29,7 @@ The file contains userId, name, address and date of birth.
 
 ...
 
-- **  2) soc-LiveJournal1Adj.txt **
+### 2) soc-LiveJournal1Adj.txt
 
 The second file contains a userID with all of their friends userID.
 
