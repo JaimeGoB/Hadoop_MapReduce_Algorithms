@@ -109,12 +109,14 @@ Has friends:
 
 ## Problem 4 - Sorting Friends List by Age
 
-For user 49979:
+**For user 49979:**
+
 
 Has friends:
 
 
-49896,49936,49949,49952,49963,49973,49951
+
+**49896,49936,49949,49952,49963,49973,49951**
 
 
 
