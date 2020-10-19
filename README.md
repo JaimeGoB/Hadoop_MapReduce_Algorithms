@@ -113,12 +113,13 @@ For user 49979:
 
 Has friends:
 
-49979	         
 
 49896,49936,49949,49952,49963,49973,49951
 
 
+
 Their friends list will be sorted by friends first name and age:
+
 
 49979	Eric 	24
 
